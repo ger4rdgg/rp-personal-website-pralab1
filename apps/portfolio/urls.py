@@ -1,7 +1,7 @@
 from django.urls import paths
 from apps.portfolio import views
 
-urls patterns = [
-
-    path('', views.porject_lit)
+urlpatterns = [
+	path('', views.project_list, name='project_list'),
+	path('<int:pk>', views.project_detail, name='project_detail')
 ]
